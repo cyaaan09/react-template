@@ -6,7 +6,8 @@ import { Col } from "reactstrap";
 import itsmLogo from "../../assets/images/itsm_logo_word.png";
 import cictoLogo from "../../assets/images/itsm_logo.png";
 
-const CarouselPage = () => {
+const CarouselPage = (office) => {
+  const officeName = "OFFICE NAME";
   return (
     <React.Fragment>
       <Col xl={9}>
@@ -19,22 +20,32 @@ const CarouselPage = () => {
                   <div className="col-lg-12">
                     <div className="text-center">
                       <h4 className="mb-3">
-                        <img
+                        {/* <img
                           src={cictoLogo}
                           alt=""
                           height="40"
                           className="auth-logo-light"
-                        />
-                        <span className="text-primary">Information Technology Service Management</span>
-
+                        /> */}
+                        <span className="text-primary">{officeName}</span>
                       </h4>
                       <div dir="ltr">
-
                         <div>
                           <div className="item">
                             <div className="py-3">
                               <p className="font-size-16 mb-4">
-                                Designed to provide functions, maintenance, and support of information technology devices, or services including but not limited to computer systems application development and maintenance; systems integration and interoperability; operating systems maintenance and design; computer systems programming; computer systems software support; planning and security relating to information technology devices; data management consultation; information technology education and consulting; information technology planning and standards; and establishment of local area network and workstation management standards.
+                                Lorem Ipsum is simply dummy text of the printing
+                                and typesetting industry. Lorem Ipsum has been
+                                the industry&apos;s standard dummy text ever
+                                since the 1500s, when an unknown printer took a
+                                galley of type and scrambled it to make a type
+                                specimen book. It has survived not only five
+                                centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged. It
+                                was popularised in the 1960s with the release of
+                                Letraset sheets containing Lorem Ipsum passages,
+                                and more recently with desktop publishing
+                                software like Aldus PageMaker including versions
+                                of Lorem Ipsum.
                               </p>
                             </div>
                           </div>
@@ -49,6 +60,6 @@ const CarouselPage = () => {
         </div>
       </Col>
     </React.Fragment>
-  )
-}
-export default CarouselPage
+  );
+};
+export default CarouselPage;

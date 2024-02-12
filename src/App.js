@@ -20,8 +20,6 @@ import Authmiddleware from "./routes/route";
 // layouts Format
 import VerticalLayout from "./components/VerticalLayout/";
 import NonAuthLayout from "./components/NonAuthLayout";
-s;
-
 // Import scss
 import "./assets/scss/theme.scss";
 import "./assets/css/tableStyle.css";
@@ -38,8 +36,13 @@ import { getDivision, getUserRoles } from "features/user/userListSlice";
 import { getRequestTypes } from "features/request/requestTypeSlice";
 import { useHistory } from "react-router-dom/";
 import Notifications from "components/Notifications";
+// Importing package.json file to access its properties
+import packageJson from "../package.json";
+
+// Inside your React component
 
 const App = (props) => {
+  document.title = packageJson.name;
   const dispatch = useDispatch();
   const history = useHistory();
   axios.defaults.baseURL =
